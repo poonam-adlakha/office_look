@@ -1,0 +1,714 @@
+:root {
+    --background: #000000;
+    --wall: #e2dc8f;
+    --clothes: #5788d7;
+    --clothesShade:#1a222e;
+    --hair: #302e2e;
+    --hairShade:#5a0303;
+    --skin_color: #da977b;
+    --nose: #633623;
+    --eyebrow: #211b1b;
+    --white: #ffffff;
+    --table: #72726f;
+    --apple: #72726f;
+    --cup: #163465;
+    --coffee: #a46d2d;
+    --chair: #381f57;
+    --skirt: #e03cba;
+    --shoe: #1d181c;
+}
+
+body {
+    background: linear-gradient(60deg, var(--wall) 30%, transparent);
+    background-size: 100px 100px;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(244, 232, 146);
+    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
+    
+}
+
+.container {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    width: 10rem;
+    height: 10rem;
+}
+
+.clothes {
+    width: 8em;
+    height: 9em;
+    background: radial-gradient(at 50% 30%, var(--clothes), var(--clothesShade));
+    position: absolute;
+    display: block;
+    border-radius: 5em 5em 7.2em 7.2em;
+    z-index: 5;
+    top:170%;
+}
+
+.design{
+    width: 2em;
+    height: 7em;
+    background: var(--white);
+    position: absolute;
+    display: block;
+    border-radius: 2%;
+    z-index: 5;
+    top: 12%;
+    left: 20%;
+    transform: translate(80%, -20%) rotate(20deg);
+}
+
+.buttons1,
+.buttons2 {
+    width: 0.5em;
+    height: 0.5em;
+    background: aliceblue;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 48%;
+    top: 30%;
+}
+
+.buttons2 {
+    top: 60%;
+}
+
+.head {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    width: 5em;
+    height: 5.6em;
+    background: var(--skin_color);
+    border-radius: 3em 3em 4em 4em;
+    left: calc(50% - 38px);
+    top: 175px;
+}
+
+.neck {
+    position: absolute;
+    display: block;
+    width: 35px;
+    height: 30px;
+    background: var(--skin_color);
+    left: calc(50% - 15px);
+    top: 160%;
+    border-radius: 0% 0% 50% 50%;
+    z-index: 6;
+}
+
+.hair1 {
+    display: block;
+    position: absolute;
+    width: 4.5em;
+    height: 1em;
+    background: linear-gradient(to bottom, var(--hairShade), var(--hair));
+    border-radius: 50% 50% 0% 70%;
+    left: 40%;
+    top: 105%;
+    box-shadow: inset 10px -1px lighten(var(--background) 10%);
+    transform: rotate(30deg);
+    z-index: 5;
+}
+
+.hair2 {
+    width: 7em;
+    height: 7.8em;
+    position: absolute;
+    display: block;
+    background: linear-gradient(to bottom, var(--hairShade), var(--hair));
+    left: 15%;
+    top: 95%;
+    border-radius: 6em 5.5em 4em 4em;
+    z-index: 2;
+}
+
+.hair3 {
+    display: block;
+    position: absolute;
+    width: 3.3em;
+    height: 1em;
+    background: linear-gradient(to bottom, var(--hairShade), var(--hair));
+    border-radius: 50% 50% 0% 70%;
+    left: 24%;
+    top: 105%;
+    box-shadow: inset 10px -1px (var(--background) 10%);
+    transform: rotate(-30deg);
+    z-index: 5;
+}
+
+#eyeLeft, #eyeRight {
+    width: 0.7em;
+    height: 0.5em;
+    background: black;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    z-index: 5;
+    left: 33%;
+    top: 124%;
+    animation: wink 2s linear infinite;
+}
+
+#eyeRight {
+    left: 58%;
+    top: 124%;
+}
+
+#eyeBrowLeft,
+#eyeBrowRight {
+    width: 1.1em;
+    height: 0.15em;
+    background: var(--eyebrow);
+    position: absolute;
+    display: block;
+    border-radius: 90% 90% 0% 0%;
+    z-index: 5;
+    top: 120%;
+    left: 31%;
+    transform: rotate(5deg);
+}
+
+#eyeBrowRight {
+    transform: rotate(-5deg);
+    left: 56%;
+}
+
+#nose {
+    width: 1px;
+    height: 14px;
+    background: var(--nose);
+    position: absolute;
+    display: block;
+    border-radius: 90% 90% 0% 0%;
+    z-index: 5;
+    top: 132%;
+    left: 49%;
+    transform: rotate(5deg);
+}
+
+#nose::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 6;
+    top: 90%;
+    left: 69%;
+    width: 6px;
+    height: 1.5px;
+    background: var(--nose);
+    transform: rotate(345deg);
+}
+
+
+#smile1,
+#smile2, #smile3 {
+    height: 0.4em;
+    width: 1.4em;
+    background-color: rgb(193, 84, 84);
+    position: absolute;
+    display: block;
+    border-radius: 3% 3% 90% 90%;
+    z-index: 5;
+    top: 150%;
+    left: 44%;
+}
+
+#smile2,
+#smile3 {
+    width: 0.8em;
+    border-radius: 50%;
+    top: 148%;
+    left: 44%;
+}
+
+#smile3 {
+    left: 50%;
+}
+
+#blush1,
+#blush2 {
+    position: absolute;
+    display: block;
+    width: 0.7em;
+    height: 0.4em;
+    top: 140%;
+    left: 32%;
+    background-image: radial-gradient(circle, rgb(202, 136, 147), rgb(213, 132, 132));
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#blush2 {
+    left: 62%;
+}
+
+#table {
+    width: 24em;
+    height: 1.5em;
+    background: var(--table);
+    position: absolute;
+    display: block;
+    border-radius: 1em 1em 0 0;
+    z-index: 5;
+    top: 240%;
+    left: -70%;
+}
+
+#table::before {
+    content: "";
+    width: 22em;
+    height: 1em;
+    background: var(--table);
+    position: absolute;
+    display: block;
+    z-index: 5;
+    top: 100%;
+    left: 5%;
+    border-radius: 0 0 1em 1em;
+}
+
+#tableLeg {
+    width: 1em;
+    height: 13em;
+    background: var(--table);
+    position: absolute;
+    display: block;
+    border-radius: 0 0 1em 1em;
+    z-index: 5;
+    top: 240%;
+    left: -40%;
+    bottom: 0;
+}
+
+#tableLeg::before {
+    content: "";
+        width: 1em;
+        height: 13em;
+        background: var(--table);
+        position: absolute;
+        display: block;
+        z-index: 5;
+        top: 0%;
+        left: 1750%;
+        bottom: 0;
+        border-radius: 0 0 1em 1em;
+}
+
+.Clock {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at center,
+            rgb(8, 8, 0),
+            rgba(12, 6, 6, 0.795));
+    transform-origin: left bottom;
+    border-radius: 145px;
+    border: white solid 2px;
+    top: 0%;
+    left: -110%;
+}
+
+#hour,
+#minute {
+    position: absolute;
+    width: 1%;
+    height: 16%;
+    top: 27%;
+    left: 50%;
+    transform-origin: bottom;
+    background-color: aliceblue;
+    border-top: solid 7px red;
+}
+
+#minute {
+    height: 25%;
+    top: 21%;
+    left: 50%;
+    z-index: 0.4;
+}
+
+#second {
+    position: absolute;
+    width: 1%;
+    height: 35%;
+    top: 18%;
+    left: 50%;
+    background-color: red;
+    transform-origin: bottom;
+    z-index: 0.5;
+}
+
+.Clock .block {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgb(216, 218, 221);
+    transform: translate(47px, 51px);
+    z-index: 1;
+}
+
+.Clock .numbers {
+    --angle: 0;
+    position: absolute;
+    font-size: 10px;
+    font-family: sans-serif;
+    color: rgb(250, 249, 245);
+    transform: rotate(var(--angle));
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.Clock .one {
+    --angle: 30deg;
+}
+
+.Clock .two {
+    --angle: 60deg;
+}
+
+.Clock .three {
+    --angle: 90deg;
+}
+
+.Clock .four {
+    --angle: 120deg;
+}
+
+.Clock .five {
+    --angle: 150deg;
+}
+
+.Clock .six {
+    --angle: 180deg;
+}
+
+.Clock .seven {
+    --angle: 210deg;
+}
+
+.Clock .eight {
+    --angle: 240deg;
+}
+
+.Clock .nine {
+    --angle: 270deg;
+}
+
+.Clock .ten {
+    --angle: 300deg;
+}
+
+.Clock .eleven {
+    --angle: 330deg;
+}
+
+#laptop {
+    width: 7em;
+    height: 5.5em;
+    background: linear-gradient(30deg, #333333 0%, #333333 50%, #3b3b3b 50%, #3b3b3b 100%);
+    position: absolute;
+    display: block;
+    border-radius: 1px 1px 0 0;
+    z-index: 7;
+    top: 190%;
+}
+
+#apple {
+    width: 1em;
+    height: 15em;
+    color: var(--apple);
+    position: absolute;
+    display: block;
+    border-radius: 1em 1em 0 0;
+    z-index: 5;
+    top: 40%;
+    left: 45%;
+}
+
+#flowerPot {
+    position: absolute;
+    display: block;
+    width: 15%;
+    height: 35%;
+    top: 215%;
+    left: 120%;
+    background-color: red;
+    transform-origin: bottom;
+    z-index: 7;
+}
+
+#flowerPot::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 80%;
+    top: 3%;
+    left: 10%;
+    background: linear-gradient(green, rgb(49, 63, 49));
+    border-radius: 70% 70% 20% 20%;
+    transform: translate(0%, -100%);
+    z-index: 2;
+}
+
+#flowerPot::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 40%;
+    top: 2%;
+    left: 50%;
+    background: linear-gradient(green, rgb(49, 63, 49));
+    border-radius: 70% 70% 20% 20%;
+    transform: translate(0%, -100%) rotate(10deg);
+    z-index: 2;
+}
+
+#cup {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    border-bottom: 3px solid var(--cup);
+    border-radius: 0.5em 0.5em 7em 7em;
+    background: var(--cup);
+    z-index: 7;
+    top: 230%;
+    left: -30%;
+}
+
+#cup::after {
+    content: "";
+    position: absolute;
+    height: 9px;
+    width: 5px;
+    border-radius: 50%;
+    left: -22%;
+    top: 10%;
+    z-index: 7;
+    border: 6px solid var(--cup);
+    background: transparent;
+}
+
+#cup::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5%;
+    background: linear-gradient(to bottom, var(--coffee) 15%, var(--cup) 20% 70%);
+    z-index: 1;
+}
+
+#chair {
+    position: absolute;
+    width: 10em;
+    height: 11em;
+    border-bottom: 3px solid var(--chair);
+    border-radius: 2em 2em 3em 3em;
+    background: var(--chair);
+    z-index: 1;
+    top: 165%;
+    left: 0%;
+}
+
+#chair::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 7em;
+    border-bottom: 3px solid var(--chair);
+    border-radius: 2em 2em 0.8em 0.8em;
+    background: var(--chair);
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+}
+#chairLeg {
+    position: absolute;
+    width: 1em;
+    height: 6em;
+    border-bottom: 3px solid var(--chair);
+    border-radius: 0.8em 0.8em 2em 2em;
+    background: var(--chair);
+    z-index: 1;
+    top: 310%;
+    left: 62%;
+    transform: rotate(-30deg);
+}
+
+#chairLeg::before {
+    content: "";
+    position: absolute;
+    width: 1em;
+    height: 5em;
+    border-bottom: 3px solid var(--chair);
+    border-radius: 0.8em 0.8em 2em 2em;
+    background: var(--chair);
+    z-index: 1;
+    top: -15%;
+    left: -190%;
+    transform: rotate(60deg);
+}
+
+#skirt {
+    position: absolute;
+    width: 7em;
+    height: 3em;
+    border-radius: 5em 5em 0.6em 0.6em;
+    background: linear-gradient(var(--clothesShade), var(--skirt));
+    z-index: 2;
+    top: 253%;
+    left: 15%;
+    transform: perspective(181deg) skew(10deg);
+}
+
+#leg {
+    position: absolute;
+    width: 1.5em;
+    height: 8em;
+    border-radius: 2em 2em 2.5em 2.5em;
+    background: var(--skin_color);
+    z-index: 3;
+    top: 264%;
+    left: 32%;
+    transform: rotate(340deg);
+}
+
+#leg::after {
+    content: "";
+    position: absolute;
+    width: 8.3em;
+    height: 1.5em;
+    border-radius: 2em 2em 2.7em 2.7em;
+    background: var(--skin_color);
+    z-index: 3;
+    top: 28%;
+    left: -100%;
+    transform: rotate(190deg);
+}
+
+#shoe {
+    position: absolute;
+    width: 2em;
+    height: 3em;
+    border-radius: 2em;
+    background: var(--shoe);
+    z-index: 2;
+    top: 280%;
+    left: 0%;
+    transform: rotate(10deg);
+}
+
+#shoe::after {
+    content: "";
+    position: absolute;
+    width: 2em;
+    height: 3em;
+    border-radius: 2em;
+    background: var(--shoe);
+    z-index: 7;
+    top: 150%;
+    left: 245%;
+    transform: rotate(-10deg);
+}
+
+#shoulder {
+    position: absolute;
+    width: 1.4em;
+    height: 3em;
+    border-radius: 0em 0em 2.5em 2.5em;
+    background: var(--skin_color);
+    z-index: 5;
+    top: 205%;
+    left: 10%;
+}
+#shoulder::after {
+    content: "";
+    position: absolute;
+    width: 1.4em;
+    height: 3em;
+    border-radius: 0em 0em 2.5em 2.5em;
+    background: var(--skin_color);
+    z-index: 5;
+    top: 0%;
+    left: 470%;
+}
+
+#heartLeft,
+#heartRight,
+#heartCenter {
+    position: relative;
+    color: var(--apple);
+    font-size: 10px;
+    transform: translate(80%, 90%);
+    z-index: 5;
+    animation: hearts 2s linear infinite;
+}
+
+#heartRight {
+    transform: translate(60%, 20%);
+}
+
+#heartCenter {
+    transform: translate(40%, 90%);
+}
+
+@keyframes hearts {
+    0% {
+        bottom: 10px;
+        opacity: 0;
+    }
+
+    50% {
+        bottom: 50px;
+        opacity: .3;
+    }
+
+    100% {
+        bottom: 80px;
+        opacity: 0;
+    }
+}
+
+@keyframes wink {
+    0% {
+        transform: scaleY(1);
+    }
+
+    18% {
+        transform: scaleY(1);
+    }
+
+    20% {
+        transform: scaleY(0);
+    }
+
+    25% {
+        transform: scaleY(1);
+    }
+
+    38% {
+        transform: scaleY(1);
+    }
+
+    40% {
+        transform: scaleY(0);
+    }
+
+    45% {
+        transform: scaleY(1);
+    }
+
+    80% {
+        transform: scaleY(1);
+    }
+}
