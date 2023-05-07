@@ -4,30 +4,27 @@
     --clothes: #5788d7;
     --clothesShade:#1a222e;
     --hair: #302e2e;
-    --hairShade:#5a0303;
+    --hairShade:#473C33;
     --skin_color: #da977b;
     --nose: #633623;
     --eyebrow: #211b1b;
     --white: #ffffff;
     --table: #72726f;
     --apple: #72726f;
-    --cup: #163465;
+    --cup: #850000;
     --coffee: #a46d2d;
-    --chair: #381f57;
-    --skirt: #e03cba;
-    --shoe: #1d181c;
+    --chair: #C07F00;
+    --skirt: #CB1C8D;
+    --shoe: #2B3467;
 }
 
 body {
-    background: linear-gradient(60deg, var(--wall) 30%, transparent);
+    background: #FFE6E6 ;
     background-size: 100px 100px;
-    background-attachment: fixed;
+    background-position: 0 0, 25px 25px, 50px 50px;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
-    background-color: rgb(244, 232, 146);
-    background-position: 0 0, 0 50px, 50px -50px, -50px 0px;
-    
+    overflow: hidden;  
 }
 
 .container {
@@ -440,8 +437,8 @@ body {
     width: 15%;
     height: 35%;
     top: 215%;
-    left: 120%;
-    background-color: red;
+    left: -55%;
+    background-color: #E76161;
     transform-origin: bottom;
     z-index: 7;
 }
@@ -711,4 +708,141 @@ body {
     80% {
         transform: scaleY(1);
     }
+}
+
+.robot {
+      position: absolute;
+      width: 200px;
+      height: 250px;
+      overflow: hidden;
+      top: 95%;
+      left: 90%;
+}
+
+   /* Create the head */
+.robot-head {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  top: 17%;
+  left: 10%;
+}
+
+/* Create the eyes */
+.robot-eye {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+/* Position the second eye */
+.robot-eye.right {
+  left: 50%;
+}
+
+/* Add a small highlight to the eyes */
+.robot-eye:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
+
+/* Create the mouth */
+.robot-mouth {
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  border: 1.7px solid black;
+  position: absolute;
+  bottom: 15%;
+  left: 25%;
+}
+
+/* Create the body */
+.robot-body {
+  width: 90px;
+  height: 110px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 10px;
+  left: 10%;
+  top: 15%;
+}
+
+/* Create the arms */
+.robot-arm {
+  width: 20px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 30%;
+}
+
+/* Position the first arm */
+.robot-arm.left {
+  left: -30px;
+}
+
+/* Position the second arm */
+.robot-arm.right {
+  right: -30px;
+}
+
+/* Add some details to the arms */
+.robot-arm:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Create the legs */
+.robot-leg {
+  width: 20px;
+  height: 70px;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Position the first leg */
+.robot-leg.left {
+  left: 20%;
+}
+
+/* Position the second leg */
+.robot-leg.right {
+  right: 20%;
+}
+
+/* Add some details to the legs */
+.robot-leg:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
 }
